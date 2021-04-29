@@ -1,8 +1,10 @@
 var paciente1 = document.querySelector("#paciente1"); // pegando os dados do paciente 1;
 var tdPeso1 = paciente1.querySelector(".info-peso"); // buscando apenas o conteúdo da coluna peso do paciente 1;
+var peso1 = tdPeso1;
 var tdAtura1 = paciente1.querySelector(".info-altura"); // buscando apenas o conteúdo da coluna altura do paciente 1;
 var tdImc1 = document.querySelector("#imcP1"); // buscando apenas o conteúdo da coluna IMC do paciente 1;
-var imcp1 = (tdPeso1.textContent / (tdAtura1.textContent * tdAtura1.textContent)); // realizando calculo IMC do paciente 1;
+var imcp1 = (peso1.textContent / (tdAtura1.textContent * tdAtura1.textContent)); // realizando calculo IMC do paciente 1;
+
 
 tdImc1.textContent = imcp1.toFixed(1); // Alterando a coluna IMC e setando apenas 2 números após a virgula;
 
@@ -41,3 +43,7 @@ var tdImc5 = document.querySelector("#imcP5"); // buscando apenas o conteúdo da
 var imcp5 = (tdPeso5.textContent / (tdAtura5.textContent * tdAtura5.textContent)); // realizando calculo IMC do paciente 5;
 
 tdImc5.textContent = imcp5.toFixed(1); // Alterando a coluna IMC e setando apenas 2 números após a virgula;
+
+if (peso1 < 0 || peso1 > 200) {
+    alert("Peso inválido!");
+}
