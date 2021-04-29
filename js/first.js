@@ -16,11 +16,13 @@ for (var i = 0; i < pacientes.length; i++) {
 
     if (peso <= 0 || peso >= 1000) {
         pesoValido = false;
+        paciente.style.backgroundColor = "lightcoral";
         tdImc.textContent = "Peso Inválido!";
     }
 
     if (altura <= 0 || altura >= 3.00) {
         alturaValida = false;
+        paciente.style.backgroundColor = "lightcoral";
         tdImc.textContent = "Altura Inválida!"
     }
 
