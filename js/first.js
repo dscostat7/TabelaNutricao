@@ -1,3 +1,5 @@
+var titulo = document.querySelector(".titulo");
+
 var pacientes = document.querySelectorAll(".paciente");
 
 for (var i = 0; i < pacientes.length; i++) {
@@ -16,13 +18,13 @@ for (var i = 0; i < pacientes.length; i++) {
 
     if (peso <= 0 || peso >= 1000) {
         pesoValido = false;
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-invalido");
         tdImc.textContent = "Peso Inválido!";
     }
 
     if (altura <= 0 || altura >= 3.00) {
         alturaValida = false;
-        paciente.style.backgroundColor = "lightcoral";
+        paciente.classList.add("paciente-invalido");
         tdImc.textContent = "Altura Inválida!"
     }
 
@@ -31,3 +33,16 @@ for (var i = 0; i < pacientes.length; i++) {
         tdImc.textContent = imc.toFixed(1);
     }
 }
+
+titulo.addEventListener("click", mostraMensagem);
+
+function mostraMensagem() {
+    alert("Clicouu!!");
+}
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+
+botaoAdicionar.addEventListener("click", function (event) {
+    event.preventDefault();
+    alert("Clicado!");
+})
