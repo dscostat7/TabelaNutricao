@@ -1,6 +1,6 @@
 # Tabela Nutrição
 ____________________
 
-#### Criado para fins educacionais, porém serve como base de calculos!
+#### Application for study more JS!
 
 >JS;
