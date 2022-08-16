@@ -1,5 +1,5 @@
 <h1 align="center">
-	JavaScript Simple Application <Component_feedback />
+	JavaScript Simple Application 
 </h1>
 
 <p align="center">Table Nutrition</p>
